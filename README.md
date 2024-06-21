@@ -9,6 +9,7 @@ GroceryXpress is an Android application designed to simplify grocery shopping by
 - **Location Services:** Integration with Google Maps SDK for location-based services.
 - **Notifications:** Real-time notifications powered by Firebase Cloud Messaging (FCM).
 - **Pincode Search:** Search place details using a Pincode API.
+- **Razorpay:** Payment gateway for processing payments securely.
 - **Crash Reporting:** Detailed crash reports with Firebase Crashanalytics.
 - **Network Requests:** Easy networking with the Volley library.
 
@@ -21,18 +22,13 @@ GroceryXpress is an Android application designed to simplify grocery shopping by
 - **Google Maps SDK:** For location-based features.
 - **Firebase Cloud Messaging (FCM):** For push notifications.
 - **Pincode API:** For fetching location details based on pincode.
+- **Razorpay:** Payment gateway for processing payments securely.
 - **Firebase Crashanalytics:** For tracking and analyzing app crashes.
 - **Volley:** For managing network operations.
 
 ## Screenshots
-![WhatsApp Image 2024-06-21 at 8 10 00 AM](https://github.com/bypriyan/GroceryXpress/assets/86232180/c66ae88a-c75c-46c5-8578-587e67fe4047)
-![WhatsApp Image 2024-06-21 at 8 10 01 AM](https://github.com/bypriyan/GroceryXpress/assets/86232180/cc0c9fbf-569b-4e00-9c94-4ab8088202b0)
-![WhatsApp Image 2024-06-21 at 8 10 01 AM (1)](https://github.com/bypriyan/GroceryXpress/assets/86232180/dc547bba-fcfa-4197-a25c-2127efc496aa)
-![WhatsApp Image 2024-06-21 at 8 10 01 AM (2)](https://github.com/bypriyan/GroceryXpress/assets/86232180/7ca53738-4ba9-4dde-a7f9-b4cc536838ff)
-![WhatsApp Image 2024-06-21 at 8 10 02 AM](https://github.com/bypriyan/GroceryXpress/assets/86232180/c8c85bbf-1305-4944-8ac6-26a2f0ee2472)
-![WhatsApp Image 2024-06-21 at 8 10 03 AM](https://github.com/bypriyan/GroceryXpress/assets/86232180/4317af37-76e8-44a6-b875-ce94c5d01e02)
-![WhatsApp Image 2024-06-21 at 8 10 03 AM (1)](https://github.com/bypriyan/GroceryXpress/assets/86232180/78f52ee9-317f-4999-898c-e34c5202dba9)
-![WhatsApp Image 2024-06-21 at 8 10 04 AM](https://github.com/bypriyan/GroceryXpress/assets/86232180/fed3a490-87df-4b45-82fe-ff6b54057bc8)
+![WhatsApp Image 2024-06-21 at 8 10 04 AM (1)](https://github.com/bypriyan/GroceryXpress/assets/86232180/a0422a73-55be-4240-9da1-0f41b17e94d4)
+
 
 
 ## Installation
