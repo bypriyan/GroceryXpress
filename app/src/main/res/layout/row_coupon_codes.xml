@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_margin="@dimen/_6sdp"
+    app:cardElevation="@dimen/_3sdp"
+    app:cardBackgroundColor="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_6sdp"
+            android:padding="@dimen/_4sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/discriptionCoupn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="start"
+                android:layout_alignParentStart="true"
+                android:text="Anil mahant"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productName"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="T&amp;C apply"
+                android:textColor="@color/dark_greay"
+                android:textSize="@dimen/_9ssp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@color/limeGreay"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_6sdp">
+
+                <TextView
+                    android:id="@+id/discountCoupenCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/rubic"
+                    android:text="TG50"
+                    android:textColor="@color/black"
+                    android:background="@drawable/blue_outline"
+                    android:paddingLeft="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:textSize="@dimen/_13ssp"/>
+
+                <TextView
+                    android:id="@+id/applyBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_alignParentEnd="true"
+                    android:text="APPLY"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/_11ssp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

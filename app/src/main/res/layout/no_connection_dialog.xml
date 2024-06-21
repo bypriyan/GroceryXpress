@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_15sdp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/confirmOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:orientation="vertical">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_below="@id/backBtn"
+            android:layout_centerHorizontal="true"
+            app:lottie_autoPlay="true"
+            android:layout_gravity="center_horizontal"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/no_internet_lottie" />
+
+        <TextView
+            android:id="@+id/contectWith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Internet Connection"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Make Sure Wifi or Mobile data is\n turned on, then try again"
+            android:gravity="center"
+            android:id="@+id/det"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/bg"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/okBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/dark_greay"
+            android:text="OK"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/_20sdp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

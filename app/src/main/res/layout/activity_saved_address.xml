@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.SavedAddressActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/_6sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backBtn"
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="@color/transparent"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Delivery Address"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/continueFrame"
+        android:layout_below="@id/rel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <LinearLayout
+                android:id="@+id/checkoutDet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:drawableStart="@drawable/ic_bill"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:drawableTint="@color/green"
+                    android:padding="@dimen/_6sdp"
+                    android:text="Bill total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/priseLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/sTotalLableTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Sub Total : "
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/sTotalTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/_5sdp"
+                        android:text="100"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/dFeeLableTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sTotalLableTv"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Delivery Fee : "
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/dFeeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sTotalTv"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/_5sdp"
+                        android:text="20"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/couponDiscountTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dFeeLableTv"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Coupon Discount : "
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/couponDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dFeeTv"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/_5sdp"
+                        android:text="0"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/taxLableTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/couponDiscountTv"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Tax : "
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/taxFeeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/couponDiscountTv"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/_5sdp"
+                        android:text="0"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_below="@id/taxFeeTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_margin="@dimen/_6sdp"
+                        android:background="@color/limeGreay"/>
+
+                    <TextView
+                        android:id="@+id/totalLableTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Total price - "
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/allTotalPriseTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/_5sdp"
+                        android:text="20"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_6sdp"
+                    android:background="@color/limeGreay" />
+
+                <RelativeLayout
+                    android:id="@+id/discountCoupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_6sdp">
+
+                    <ImageView
+                        android:id="@+id/disIv"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/discount_coupne"
+                        android:tint="@color/green" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_toRightOf="@id/disIv"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/couponCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:drawableTint="@color/green"
+                            android:fontFamily="@font/rubic"
+                            android:maxLines="1"
+                            android:padding="@dimen/_2sdp"
+                            android:text="Add a coupon code"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/couponCodeSaved"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:drawableTint="@color/green"
+                            android:maxLines="2"
+                            android:paddingLeft="@dimen/_2sdp"
+                            android:text="Avail offers and discounts on your order"
+                            android:textColor="@color/bg"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_6sdp"
+                    android:background="@color/limeGreay" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:padding="@dimen/_6sdp">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawableStart="@drawable/ic_location"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:drawableTint="@color/green"
+                    android:text="Address"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/currentLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/green_bg_location"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingRight="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_4sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:src="@drawable/ic_current_location"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/green_bg_location"
+                        android:text="Select Location"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/deliveryAddressInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_greay"
+                    app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+                    app:boxStrokeColor="@color/green"
+                    app:hintTextColor="@color/green">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phoneNum"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_greay"
+                    app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+                    app:boxStrokeColor="@color/green"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="10"
+                    app:counterTextColor="@color/green"
+                    app:errorEnabled="true"
+                    app:hintTextColor="@color/green">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="MOBILE NUMBER"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/propertyName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_greay"
+                    app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+                    app:boxStrokeColor="@color/green"
+                    app:hintTextColor="@color/green">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="HOUSE/ FLAT/ BLOCK NO./ BUILDING NAME"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/propertyLocation"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_greay"
+                    app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+                    app:boxStrokeColor="@color/green"
+                    app:hintTextColor="@color/green">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="STREET/ ROAD/ COLONY NAME"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/area"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_greay"
+                    app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+                    app:boxStrokeColor="@color/green"
+                    app:hintTextColor="@color/green">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="AREA"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pinCode"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_greay"
+                    app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+                    app:boxStrokeColor="@color/green"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="6"
+                    app:counterTextColor="@color/green"
+                    app:errorEnabled="true"
+                    app:hintTextColor="@color/green">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="PIN CODE"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/city"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:textColorHint="@color/dark_greay"
+                        app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                        app:boxStrokeColor="@color/dark_greay"
+                        app:errorTextColor="@color/black"
+                        app:hintTextColor="@color/dark_greay">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/_15sdp"
+                            android:hint="CITY/ TOWN"
+                            android:inputType="text"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/state"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:textColorHint="@color/dark_greay"
+                        app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                        app:boxStrokeColor="@color/dark_greay"
+                        app:errorTextColor="@color/black"
+                        app:hintTextColor="@color/dark_greay">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/_15sdp"
+                            android:hint="STATE"
+                            android:inputType="text"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/saveDelAddFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/save"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_below="@+id/temp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/green"
+                        android:text="Save"
+                        android:textColor="@color/white"
+                        app:cornerRadius="@dimen/_10sdp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="@color/green"
+                        android:visibility="invisible">
+
+                    </ProgressBar>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addDeliveryAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_250sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/delivery_boy_location"/>
+
+                <RelativeLayout
+                    android:id="@+id/addLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/green_bg_location">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:src="@drawable/ic_current_location"
+                        android:layout_toLeftOf="@id/aa"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/aa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Select Location"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textSize="@dimen/_13ssp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/continueFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:visibility="gone">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/temp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/green"
+            android:text="Continue"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/_10sdp" />
+
+
+        <ProgressBar
+            android:id="@+id/progressbarCon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/green"
+            android:visibility="invisible">
+
+        </ProgressBar>
+
+    </FrameLayout>
+
+</RelativeLayout>

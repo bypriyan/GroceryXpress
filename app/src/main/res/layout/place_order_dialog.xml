@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    android:layout_margin="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_15sdp">
+
+    <LinearLayout
+        android:id="@+id/confirmOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_below="@id/backBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/cash_on_delivery" />
+
+        <TextView
+            android:id="@+id/contectWith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:gravity="center_horizontal"
+            android:text="Cash On Delivery"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/buttonsLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/okBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/green"
+                android:text="Place Order"
+                android:textColor="@color/white"
+                app:cornerRadius="@dimen/_6sdp" />
+            <TextView
+                android:id="@+id/cancelBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/green_outline"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"></TextView>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressbarD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_6sdp"
+            android:indeterminateTint="@color/green"/>
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

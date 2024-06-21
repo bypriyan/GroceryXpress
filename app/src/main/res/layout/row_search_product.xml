@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    android:padding="@dimen/_6sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_6sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:src="@drawable/togo_cart_icon"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:id="@+id/productImage"/>
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/productImage"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:maxLines="2"
+                android:lines="2"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:textSize="@dimen/_11ssp"
+                android:gravity="start"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textColor="@color/black">
+            </TextView>
+
+            <TextView
+                android:id="@+id/quentity"
+                android:layout_below="@id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200gm"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/dark_greay">
+            </TextView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/lin"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@color/limeGreay"/>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

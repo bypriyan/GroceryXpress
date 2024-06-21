@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ToGo Cart</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="placeOrder">Place your first order from the \'home\' section</string>
+    <string name="office_address">Arya Nagar,Near Anganbadi, Kohka, Bhilai, 490023, Chhattisgarh</string>
+    <string name="about_us">ToGo cart is well known as fruits, vegetables and groceries home delivery service in bhilai and durg.</string>
+    <string name="press_ok_placeOrder">Press "place order" to confirm your order.</string>
+    <string name="MAP_API_KEY">AIzaSyB_PBDu1Ejbli8ZSsps6vDbJ_0hWk1V8RU</string>
+    <string name="search_hint">Search Dal, Rice, etc.</string>
+    <string name="suggest_product">Suggest products that you want us to make "\n"avalible to shop or feature to add on Togo Cart</string>
+    <string name="selection_based">We make refined product. selection based on quality and we assured it.</string>
+</resources>

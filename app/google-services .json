@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "39905909421",
+    "project_id": "togo-cart",
+    "storage_bucket": "togo-cart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39905909421:android:1338af07e1918a028e4424",
+        "android_client_info": {
+          "package_name": "com.bypriyan.togocart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39905909421-aesjgepo0bic3pc1nd0eeeotehfb77fs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bypriyan.togocart",
+            "certificate_hash": "5efc85526ec4b074e555441a0859e60392cb13e9"
+          }
+        },
+        {
+          "client_id": "39905909421-87kf5vj05u6l5r6ck7eb4pa1m064aapu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsabViJlPEU3tF5lnuLx5lfGXJRYgQnz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39905909421-87kf5vj05u6l5r6ck7eb4pa1m064aapu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    android:padding="@dimen/_6sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_6sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:src="@drawable/togo_cart_icon"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:id="@+id/productImage"/>
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@id/imageMinus"
+            android:layout_toRightOf="@id/productImage"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:maxLines="1"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:textSize="@dimen/_11ssp"
+                android:gravity="start"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textColor="@color/black">
+            </TextView>
+
+            <TextView
+                android:id="@+id/quentity"
+                android:layout_below="@id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200gm"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/dark_greay">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sellingPrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="230"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textSize="@dimen/_16ssp"
+                    android:textColor="@color/dark_greay"/>
+
+                <TextView
+                    android:id="@+id/productQuentity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 items"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/totalPrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="= 2500"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+
+            android:id="@+id/imageMinus"
+            android:layout_width="22dp"
+            android:layout_centerVertical="true"
+            android:layout_height="22dp"
+            android:padding="@dimen/_3sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/green_bg"
+            android:layout_marginRight="@dimen/_6sdp"
+            android:src="@drawable/ic_minus"
+            android:tint="@color/white"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/lin"
+            android:background="@color/limeGreay"/>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

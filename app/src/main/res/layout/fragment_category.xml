@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".ui.category.CategoryFragment">
+
+    <ScrollView
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Categories"
+                android:textStyle="bold"
+                android:textSize="@dimen/_18ssp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/bg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Curated with the best range of products"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textColor="@color/dark_greay"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclearCategories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:padding="@dimen/_8sdp"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                app:spanCount="4"
+                tools:listitem="@layout/row_category" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Offer's Zone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_6sdp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclearCouponCodes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/slider"
+                    app:stackFromEnd="true"
+                    app:reverseLayout="true"
+                    tools:listitem="@layout/row_coupon_codes"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            </androidx.core.widget.NestedScrollView>
+            <View
+                android:visibility="gone"
+                android:id="@+id/above"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@color/white"
+                android:layout_margin="@dimen/_5sdp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

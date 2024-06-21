@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.PymentActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/_6sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backBtn"
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="@color/transparent"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Payment"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/totalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:padding="@dimen/_15sdp"
+                android:text="Bill Total: 202.0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@color/limeGreay" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_12sdp">
+
+                <ImageView
+                    android:id="@+id/cartImg"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_cart"
+                    android:tint="@color/green"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery"
+                    android:layout_toRightOf="@id/cartImg"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:id="@+id/delTv"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/itemCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 items"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:maxLines="1"
+                    android:layout_below="@+id/delTv"
+                    android:layout_toRightOf="@id/cartImg"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/dark_greay"/>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@color/limeGreay" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_12sdp">
+
+                <ImageView
+                    android:id="@+id/locImg"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_location"
+                    android:tint="@color/green"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:layout_toRightOf="@id/locImg"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:id="@+id/nameOfReciver"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/delivlocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ward no 17.. Ambikapur, Chhaatishgarh"
+                    android:layout_below="@+id/nameOfReciver"
+                    android:layout_toRightOf="@id/locImg"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/dark_greay"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@color/limeGreay" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_12sdp">
+
+                <ImageView
+                    android:id="@+id/riderImg"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_delivery_person"
+                    android:tint="@color/green"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estimated delivery time"
+                    android:layout_toRightOf="@id/riderImg"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:id="@+id/est"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/estimateDeliveryTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ward no 17.. Ambikapur, Chhaatishgarh"
+                    android:layout_below="@+id/est"
+                    android:layout_toRightOf="@id/riderImg"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/dark_greay"/>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_15sdp"
+                android:background="@color/limeGreay">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Payment Options"
+                    android:layout_toRightOf="@id/locImg"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/payOnlineOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_12sdp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAnimationView"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    app:lottie_autoPlay="true"
+                    android:layout_gravity="center_horizontal"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/pay_online" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pay Online"
+                    android:layout_toRightOf="@id/lottieAnimationView"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:id="@+id/onlinePaymentTv"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment secured by TOGO Cart"
+                    android:layout_below="@+id/onlinePaymentTv"
+                    android:layout_toRightOf="@id/lottieAnimationView"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/dark_greay"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:src="@drawable/ic_double_arrow"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/green"
+                    android:padding="@dimen/_6sdp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@color/limeGreay" />
+
+            <RelativeLayout
+                android:id="@+id/cashOnDeliveryOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_12sdp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAnimationView2"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    app:lottie_autoPlay="true"
+                    android:layout_gravity="center_horizontal"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/cash_on_delivery" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cash On Delivery"
+                    android:layout_toRightOf="@id/lottieAnimationView2"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:id="@+id/cashPaymentTv"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Click to confirm your order"
+                    android:layout_below="@+id/cashPaymentTv"
+                    android:layout_toRightOf="@id/lottieAnimationView2"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/dark_greay"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:src="@drawable/ic_double_arrow"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/green"
+                    android:padding="@dimen/_6sdp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@color/limeGreay" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
