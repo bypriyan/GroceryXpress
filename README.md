@@ -27,8 +27,7 @@ GroceryXpress is an Android application designed to simplify grocery shopping by
 - **Volley:** For managing network operations.
 
 ## Screenshots
-![WhatsApp Image 2024-06-21 at 8 10 04 AM (1)](https://github.com/bypriyan/GroceryXpress/assets/86232180/9281e459-7c75-413c-a1d0-008cbb978622)
-
+![WhatsApp Image 2024-06-21 at 8 10 04 AM (1)](https://github.com/bypriyan/GroceryXpress/assets/86232180/4cd82eb7-eed9-4104-be70-f7ab0e445c15)
 
 
 
